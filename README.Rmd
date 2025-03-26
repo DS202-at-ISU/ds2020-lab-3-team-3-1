@@ -35,8 +35,8 @@ library(dplyr)
 library(tidyverse)
 
 deaths <- av |>
-  pivot_longer(cols = starts_with("Death"), names_to = "DeathTime", values_to = "Death") |>
-  mutate(DeathTime = parse_number(DeathTime))
+  pivot_longer(cols = starts_with("Death"), names_to = "Time", values_to = "Death") |>
+  mutate(Time = parse_number(Time))
 View(deaths)
 ```
 
